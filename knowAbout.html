@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="src/css/knowAbout.css">
+
+    <title>Know About - TimSort</title>
+</head>
+
+
+<body>
+    <p class="title">
+        KNOW ABOUT TIMSORT
+    </p>
+    <div class="block">
+        <p>
+            What is a TimSort?
+        </p>
+        <p>
+            Timsort is a hybrid, stable sorting algorithm, derived from merge sort and insertion sort, designed to
+            perform well on many kinds of real-world data.</p>
+        <p>
+            Tim sort is an adaptive sorting algorithm that needs O(n log n) comparisons to sort an array of n elements.
+            It was designed and implemented by Tim Peters in 2002 in a python programming language. It has been python's
+            standard sorting algorithm since version 2.3. It is one of the fastest sorting algorithm.
+        </p>
+        <p>
+            The basic approach used in the Tim sort algorithm is - first divide the data into small chunks (preferably
+            chunk sizes of 32 or 64) and solved these chunks by using the insertion sort and then merge all the big
+            chunks using the merge function of the merge sort.
+        </p>
+        <p class="imp_title">
+            Implemetation of TimSort.
+        </p>
+        <p>
+            First sort small pieces using Insertion Sort, then merges the pieces using a merge of merge sort.
+            We divide the Array into blocks known as Run. We sort those runs using insertion sort one by one and then
+            merge those runs using the combine function used in merge sort. If the size of the Array is less than run,
+            then Array gets sorted just by using Insertion Sort. The size of the run may vary from 32 to 64 depending
+            upon the size of the array. Note that the merge function performs well when size subarrays are powers of 2.
+            The idea is based on the fact that insertion sort performs well for small arrays.
+        </p>
+        <p>
+            Time Complexity: O(N log(N)), Sorting arrays on different machines. Merge Sort is a recursive algorithm and
+            time complexity can be expressed as following recurrence relation. T(n) = 2T(n/2) + θ(n)
+        </p>
+    </div>
+
+</body>
+
+</html>
